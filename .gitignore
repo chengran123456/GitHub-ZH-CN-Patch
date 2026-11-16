@@ -1,0 +1,12 @@
+# 运行产物与本地缓存
+cache/
+*.log
+node_modules/
+
+# 系统垃圾
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 备份
+*.bak

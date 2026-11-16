@@ -1,0 +1,101 @@
+{
+  "_note": "句式规则：用于运行时拼装的文案（如 `Fetch origin`）。按顺序匹配，先具体后笼统。$1 为捕获组。只写整串锚定（^...$）的规则，绝不写子串匹配。",
+  "rules": [
+    {
+      "re": "^Pull (.+) with rebase$",
+      "to": "变基拉取 $1"
+    },
+    {
+      "re": "^Fetch the latest changes from (.+)$",
+      "to": "从 $1 抓取最新更改"
+    },
+    {
+      "re": "^Force push (.+)$",
+      "to": "强制推送 $1"
+    },
+    {
+      "re": "^Fetch (.+)$",
+      "to": "抓取 $1"
+    },
+    {
+      "re": "^Pull (.+)$",
+      "to": "拉取 $1"
+    },
+    {
+      "re": "^Push (.+)$",
+      "to": "推送 $1"
+    },
+    {
+      "re": "^Commit to (.+)$",
+      "to": "提交到 $1"
+    },
+    {
+      "re": "^Commit (\\d+) files?$",
+      "to": "提交 $1 个文件"
+    },
+    {
+      "re": "^Commit (\\d+) files? to (.+)$",
+      "to": "提交 $1 个文件到 $2"
+    },
+    {
+      "re": "^(\\d+) files? changed$",
+      "to": "$1 个文件已更改"
+    },
+    {
+      "re": "^(\\d+) commits? ahead$",
+      "to": "领先 $1 个提交"
+    },
+    {
+      "re": "^(\\d+) commits? behind$",
+      "to": "落后 $1 个提交"
+    },
+    {
+      "re": "^Discard (\\d+) Selected Changes$",
+      "to": "放弃选中的 $1 项更改"
+    },
+    {
+      "re": "^Discard (\\d+) selected changes$",
+      "to": "放弃选中的 $1 项更改"
+    },
+    {
+      "re": "^Discard (\\d+) Selected Change$",
+      "to": "放弃选中的 $1 项更改"
+    },
+    {
+      "re": "^Discard (\\d+) selected change$",
+      "to": "放弃选中的 $1 项更改"
+    },
+    {
+      "re": "^Delete (\\d+) tags$",
+      "to": "删除 $1 个标签"
+    },
+    {
+      "re": "^Create branch from (.+)$",
+      "to": "从 $1 创建分支"
+    },
+    {
+      "re": "^Clone (.+)$",
+      "to": "克隆 $1"
+    },
+    {
+      "re": "^Open in (.+)$",
+      "to": "在 $1 中打开"
+    },
+    {
+      "re": "^Add (.+) account$",
+      "to": "添加 $1 账户"
+    },
+    {
+      "re": "^(\\d+) selected$",
+      "to": "已选 $1 项"
+    },
+    {
+      "re": "^(\\d+) changed files?$",
+      "to": "$1 个文件已更改"
+    },
+    {
+      "re": "^This branch is up to date with (.+)$",
+      "to": "此分支已与 $1 同步"
+    }
+  ]
+}
