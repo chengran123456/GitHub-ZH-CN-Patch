@@ -81,6 +81,9 @@ node --version
 Test-Path "$env:LOCALAPPDATA\GitHubDesktop\app-3.6.11\resources\app\main.js"
 ```
 
+> **Node.js 是硬性前置**：`apply.js` / `verify.js` / `restore.js` 全部是 Node 脚本，没装 Node 会直接报错退出。
+> **重复执行是安全的**：已经注入过时，`apply.js` 只输出「main.js 已注入，跳过 / index.html 已注入，跳过」；备份只保留第一次的原件，不会用"已改过的文件"覆盖原始备份，所以**反复跑不会破坏可还原性**。
+
 ### 3.2 执行安装
 
 ```powershell

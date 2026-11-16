@@ -87,6 +87,20 @@ github-zh-cn-patch/
 
 ---
 
+## 前置要求
+
+动手前先确认这三件事——它们也是最容易卡住的三个地方：
+
+| 项 | 要求 | 不满足会怎样 |
+| --- | --- | --- |
+| **Node.js** | 必须安装（LTS 即可，本机实测 v22） | `apply.js` / `verify.js` / `restore.js` 与 Copilot 的 `inject.js` 全是 Node 脚本。没装 Node：GitHub Desktop 装不上；Copilot 的启动器由 `.vbs` 以 0 窗口方式拉起，会**静默失败**——看不到任何提示，界面照样是英文 |
+| **Copilot 目录里只能有一个 `.cmd`** | 只保留自带的 `启动 GitHub Copilot 中文版.cmd` | `启动 GitHub Copilot 中文版.vbs` 的取法是"取该目录下**第一个** `.cmd` 文件"来执行，混入别的批处理会启动错文件 |
+| **脚本可以放心重复执行** | 无需先卸载、无需清空目录 | `apply.js` 是幂等的：已注入只会输出「已注入，跳过」；备份**只做第一次**，不会把改过的文件当成原始备份覆盖掉。Copilot 词典改完 3 秒热生效，连重启都不用 |
+
+> Node.js 下载：<https://nodejs.org>（选 LTS，装完 `node --version` 能出版本号即可）。
+
+---
+
 ## 快速开始
 
 ### A. GitHub Desktop（装完即中文，无需快捷方式）
